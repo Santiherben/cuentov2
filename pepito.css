@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif; /* Fuente más infantil */
+    background-color: #fce4ec; /* Fondo pastel suave y amigable */
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8bbd0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header h1 {
+    color: #880e4f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.accessibility-panel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-audio { background-color: #4fc3f7; color: #fff; }
+.btn-zoom { background-color: #81c784; color: #fff; }
+.btn-nav { background-color: #ffb74d; color: #fff; }
+
+.navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 20px;
+    z-index: 10;
+}
+
+#loading {
+    display: none;
+    margin-top: 15px;
+    color: #d81b60;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.book-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    transition: transform 0.4s ease-out; /* Transición suave para el zoom */
+    transform-origin: top center;
+}
+
+.flip-book {
+    display: none; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* Sombra más realista */
+}
+
+.page {
+    background-color: #fff;
+    border: solid 1px #e0e0e0;
+    overflow: hidden;
+}
+
+.page canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.stf__wrapper {
+    background-color: transparent !important;
+}
